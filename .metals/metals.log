@@ -1,0 +1,5 @@
+2025.04.11 09:21:47 INFO  tracing is disabled for protocol LSP, to enable tracing of incoming and outgoing JSON messages create an empty file at c:\Users\codnw\PycharmProjects\foodbank\.metals\lsp.trace.json or C:\Users\codnw\AppData\Local\scalameta\metals\cache\lsp.trace.json
+2025.04.11 09:21:59 INFO  logging to files C:\Users\codnw\PycharmProjects\foodbank\.metals\metals.log
+2025.04.11 09:21:59 INFO  Started: Metals version 1.5.2 in folders 'C:\Users\codnw\PycharmProjects\foodbank' for client Visual Studio Code 1.99.1.
+2025.04.11 09:22:04 WARN  no build tool detected in workspace 'C:\Users\codnw\PycharmProjects\foodbank'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+2025.04.11 09:22:04 WARN  Build server is not auto-connectable.
