@@ -3,3 +3,9 @@
 2025.04.11 09:21:59 INFO  Started: Metals version 1.5.2 in folders 'C:\Users\codnw\PycharmProjects\foodbank' for client Visual Studio Code 1.99.1.
 2025.04.11 09:22:04 WARN  no build tool detected in workspace 'C:\Users\codnw\PycharmProjects\foodbank'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
 2025.04.11 09:22:04 WARN  Build server is not auto-connectable.
+2025.04.25 09:58:57 INFO  Started: Metals version 1.5.2 in folders 'C:\Users\codnw\PycharmProjects\foodbank' for client Visual Studio Code 1.99.3.
+2025.04.25 09:59:09 WARN  no build tool detected in workspace 'C:\Users\codnw\PycharmProjects\foodbank'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+2025.04.25 09:59:09 WARN  Build server is not auto-connectable.
+2025.04.25 10:03:19 INFO  Shutting down server
+2025.04.25 10:03:19 INFO  shutting down Metals
+2025.04.25 10:03:19 INFO  Exiting server
