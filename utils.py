@@ -4,14 +4,14 @@ import requests
 import xml.etree.ElementTree as ET
 import pandas as pd
 
-encode = "j6wUNyCq%2F4vEC5xyrSKR99EsHqzxY3LvbI%2BkQUn%2BDgwsT0EfL%2FfkpPnWEN3d%2B%2B3T2mbvOPPZUmnhYg3QxC5jFw%3D%3D"
-decode = "j6wUNyCq/4vEC5xyrSKR99EsHqzxY3LvbI+kQUn+DgwsT0EfL/fkpPnWEN3d++3T2mbvOPPZUmnhYg3QxC5jFw=="
+encode = "UHD0d7Tof2U4mU3gGH%2B3QxTtjc5FwFNnHyqyTBWq%2BnI5TeubdJF6ytylohZXVLp%2B7oVsmoG6CUVmNaqKsyRGIA%3D%3D"
+decode = "UHD0d7Tof2U4mU3gGH+3QxTtjc5FwFNnHyqyTBWq+nI5TeubdJF6ytylohZXVLp+7oVsmoG6CUVmNaqKsyRGIA=="
 
 BASE_URL = "http://apis.data.go.kr/B460014/foodBankInfoService2"
 SERVICE_KEY = decode
 
 # 1. 이용자 통계데이터 조회
-def getUserInfo(page_no=1, num_of_rows=10, data_type='xml', stdr_ym='202402', area_cd='02', unity_signgu_cd='', spctr_cd='', user_seccd='', user_clscd='', happy_trgter_yn=''):
+def getUserInfo(page_no=1, num_of_rows=500, data_type='xml', stdr_ym='202402', area_cd='', unity_signgu_cd='', spctr_cd='', user_seccd='', user_clscd='', happy_trgter_yn=''):
     url = f"{BASE_URL}/getUserInfo"
     params = {
         "serviceKey": SERVICE_KEY,
@@ -42,7 +42,7 @@ def getUserInfo(page_no=1, num_of_rows=10, data_type='xml', stdr_ym='202402', ar
     } for i in root.findall(".//item")])
 
 # 2. 이용시설단체 통계데이터 조회
-def getFcltyGrpInfo(page_no=1, num_of_rows=10, data_type='xml', stdr_ym='202402', area_cd='', unity_signgu_cd='', spctr_cd='', fclty_se_nm='', fclty_grp_clscd=''):
+def getFcltyGrpInfo(page_no=1, num_of_rows=500, data_type='xml', stdr_ym='202402', area_cd='', unity_signgu_cd='', spctr_cd='', fclty_se_nm='', fclty_grp_clscd=''):
     url = f"{BASE_URL}/getFcltyGrpInfo"
     params = {
         "serviceKey": SERVICE_KEY,
@@ -71,7 +71,7 @@ def getFcltyGrpInfo(page_no=1, num_of_rows=10, data_type='xml', stdr_ym='202402'
     } for i in root.findall(".//item")])
 
 # 3. 기부자 정보 조회
-def getCntrbtrInfo(page_no=1, num_of_rows=10, data_type='xml', stdr_ym='202402', area_cd='', unity_signgu_cd='', spctr_cd='', cntrbtr_seccd='', cntr_bplc_kndcd='', cntrbtr_nm=''):
+def getCntrbtrInfo(page_no=1, num_of_rows=500, data_type='xml', stdr_ym='202402', area_cd='', unity_signgu_cd='', spctr_cd='', cntrbtr_seccd='', cntr_bplc_kndcd='', cntrbtr_nm=''):
     url = f"{BASE_URL}/getCntrbtrInfo"
     params = {
         "serviceKey": SERVICE_KEY,
@@ -102,7 +102,7 @@ def getCntrbtrInfo(page_no=1, num_of_rows=10, data_type='xml', stdr_ym='202402',
     } for i in root.findall(".//item")])
 
 # 4. 접수현황 통계데이터 조회
-def getRceptStat(page_no=1, num_of_rows=10, data_type='xml', stdr_ym='202402', area_cd='', unity_signgu_cd='', spctr_cd=''):
+def getRceptStat(page_no=1, num_of_rows=500, data_type='xml', stdr_ym='202402', area_cd='', unity_signgu_cd='', spctr_cd=''):
     url = f"{BASE_URL}/getRceptStat"
     params = {
         "serviceKey": SERVICE_KEY,
@@ -126,7 +126,7 @@ def getRceptStat(page_no=1, num_of_rows=10, data_type='xml', stdr_ym='202402', a
     } for i in root.findall(".//item")])
 
 # 5. 제공현황 통계데이터 조회
-def getProvdStat(page_no=1, num_of_rows=10, data_type='xml', stdr_ym='202402', area_cd='', unity_signgu_cd='', spctr_cd='', food_yn='Y', cnttg_lclas_cd='', cnttg_mlsfc_cd=''):
+def getProvdStat(page_no=1, num_of_rows=500, data_type='xml', stdr_ym='202402', area_cd='', unity_signgu_cd='', spctr_cd='', food_yn='Y', cnttg_lclas_cd='', cnttg_mlsfc_cd=''):
     url = f"{BASE_URL}/getProvdStat"
     params = {
         "serviceKey": SERVICE_KEY,
@@ -157,7 +157,7 @@ def getProvdStat(page_no=1, num_of_rows=10, data_type='xml', stdr_ym='202402', a
     } for i in root.findall(".//item")])
 
 # 6. 기부물품 현황 조회
-def getCnttgInfo(page_no=1, num_of_rows=10, data_type='xml', stdr_ym='202402', distb_tmlmt_use_yn='N', injry_goods_intrcp_yn='Y', food_yn='Y', cnttg_lclas_cd='', cnttg_mlsfc_cd=''):
+def getCnttgInfo(page_no=1, num_of_rows=500, data_type='xml', stdr_ym='202402', distb_tmlmt_use_yn='N', injry_goods_intrcp_yn='Y', food_yn='Y', cnttg_lclas_cd='', cnttg_mlsfc_cd=''):
     url = f"{BASE_URL}/getCnttgInfo"
     params = {
         "serviceKey": SERVICE_KEY,
@@ -185,7 +185,7 @@ def getCnttgInfo(page_no=1, num_of_rows=10, data_type='xml', stdr_ym='202402', d
     } for i in root.findall(".//item")])
 
 # 7. 지원센터 정보 조회
-def getSpctrInfo(page_no=1, num_of_rows=10, data_type='xml', stdr_ym='202402', area_cd='', unity_signgu_cd='', spctr_uncd='', spctr_secd='', spctr_cd='', spctr_stscd='', oper_mby_lclas_cd='', oper_mby_sclas_cd='', sttemnt_seccd='', regist_de=''):
+def getSpctrInfo(page_no=1, num_of_rows=500, data_type='xml', stdr_ym='202412', area_cd='', unity_signgu_cd='', spctr_uncd='', spctr_secd='', spctr_cd='', spctr_stscd='', oper_mby_lclas_cd='', oper_mby_sclas_cd='', sttemnt_seccd='', regist_de=''):
     url = f"{BASE_URL}/getSpctrInfo"
     params = {
         "serviceKey": SERVICE_KEY,
@@ -229,7 +229,7 @@ def getSpctrInfo(page_no=1, num_of_rows=10, data_type='xml', stdr_ym='202402', a
     } for i in root.findall(".//item")])
 
 # 8. 선호물품 현황 조회
-def getPreferInfo(page_no=1, num_of_rows=10, data_type='xml', area_cd='', unity_signgu_cd='', spctr_cd='', prefer_cnttg_clscd=''):
+def getPreferInfo(page_no=1, num_of_rows=500, data_type='xml', area_cd='', unity_signgu_cd='', spctr_cd='', prefer_cnttg_clscd=''):
     url = f"{BASE_URL}/getPreferInfo"
     params = {
         "serviceKey": SERVICE_KEY,
