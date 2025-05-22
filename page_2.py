@@ -159,7 +159,7 @@ try:
                     st.info("🏠 추천을 받으려면 주소를 입력해주세요.")
 
             st.markdown("### 푸드뱅크/마켓 상세 정보")                     
-            st.dataframe(df.iloc[:,:-2], hide_index=True)
+            st.dataframe(df.iloc[:,:-3], hide_index=True)
                         
         else:
             st.text("조회 결과가 없습니다")
