@@ -1,17 +1,19 @@
 import streamlit as st
 import pandas as pd
 import plotly.express as px
+import os 
 
-main_page = st.Page("./pages/main_page.py", title="메인", icon="🛒")
-page_1 = st.Page("./pages/page_1.py", title="푸드뱅크/마켓 물품 조회", icon="🏢")
-page_2 = st.Page("./pages/page_2.py", title="물품 공급 제안", icon="🔗")
+
+main_page = st.Page("./main_page.py", title="메인", icon="🛒")
+page_1 = st.Page("./page_1.py", title="푸드뱅크/마켓 물품 조회", icon="🏢")
+page_2 = st.Page("./page_2.py", title="물품 공급 제안", icon="🔗")
 
 # Set up navigation 
 pg = st.navigation([main_page, page_1, page_2])
 st.set_page_config(layout="wide")
 
-sidebar_logo = "./logo/logo_sidebar.png"
-main_logo = "./logo/logo_main.png"
+sidebar_logo = "./logo_sidebar.png"
+main_logo = "./logo_main.png"
 st.logo(image=sidebar_logo, icon_image=main_logo, size='large')
 
 st.markdown("""
