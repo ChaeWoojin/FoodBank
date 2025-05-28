@@ -3,9 +3,9 @@ __all__ = ["getUserInfo", "getFcltyGrpInfo", "getCntrbtrInfo", "getRceptStat", "
 import requests
 import xml.etree.ElementTree as ET
 import pandas as pd
+import config
 
-encode = "UHD0d7Tof2U4mU3gGH%2B3QxTtjc5FwFNnHyqyTBWq%2BnI5TeubdJF6ytylohZXVLp%2B7oVsmoG6CUVmNaqKsyRGIA%3D%3D"
-decode = "UHD0d7Tof2U4mU3gGH+3QxTtjc5FwFNnHyqyTBWq+nI5TeubdJF6ytylohZXVLp+7oVsmoG6CUVmNaqKsyRGIA=="
+decode = config.decode
 
 BASE_URL = "http://apis.data.go.kr/B460014/foodBankInfoService2"
 SERVICE_KEY = decode

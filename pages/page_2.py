@@ -8,12 +8,13 @@ import utils
 import json
 import requests
 import folium
+import config
 from streamlit_folium import st_folium
 from var import areaCd, unitySignguCd, preferCnttgClscd, spctrCd, spctrSecd as spctrSecd_dict
 from pathlib import Path
 from math import radians, cos, sin, asin, sqrt
 
-KAKAO_API_KEY = "7758866813611c4b671d0ed485e11ce3"
+KAKAO_API_KEY = config.KAKAO_API_KEY
 
 # 📁 Font Registration
 font_path = "./data/MALGUN.TTF"
