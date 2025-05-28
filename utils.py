@@ -1,11 +1,11 @@
 __all__ = ["getUserInfo", "getFcltyGrpInfo", "getCntrbtrInfo", "getRceptStat", "getProvdStat", "getCnttgInfo", "getSpctrInfo", "getPreferInfo"]
 
+import streamlit as st
 import requests
 import xml.etree.ElementTree as ET
 import pandas as pd
-import config
 
-decode = config.decode
+decode = st.secrets["decode"]
 
 BASE_URL = "http://apis.data.go.kr/B460014/foodBankInfoService2"
 SERVICE_KEY = decode

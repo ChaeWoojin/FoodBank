@@ -8,7 +8,6 @@ import utils
 import json
 import requests
 import folium
-import config
 from streamlit_folium import st_folium
 from var import areaCd, unitySignguCd, preferCnttgClscd, spctrCd, spctrSecd as spctrSecd_dict
 from pathlib import Path
