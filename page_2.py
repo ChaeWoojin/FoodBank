@@ -13,7 +13,7 @@ from var import areaCd, unitySignguCd, preferCnttgClscd, spctrCd, spctrSecd as s
 from pathlib import Path
 from math import radians, cos, sin, asin, sqrt
 
-KAKAO_API_KEY = config.KAKAO_API_KEY
+KAKAO_API_KEY = st.secrets["KAKAO_API_KEY"]
 
 # 📁 Font Registration
 font_path = "./data/MALGUN.TTF"
